@@ -21,16 +21,50 @@
 </head>
 
 <body>
-<h1>新しい連絡先</h1>
+<h1>顧客情報登録</h1>
 
-<form action="/test" method="post">
-<input type="text" name="name">
-<input type="submit">
+<form action="/test_save" method="post">
+
+  <div>
+  名前：<input type="text" name="owner_name">
+  </div>
+
+  <div>
+  フリガナ：<input type="text" name="phonetic_name">
+  </div>
+
+  <div>
+  ペット名：<input type="text" name="pet_name">
+  </div>
+
+  <div>
+  種別：<input type="text" name="pet_type">
+  </div>
+
+  <div>
+  <input type="submit">
+  </div>
 </form>
 
+<!-------------------------------------------->
+ <p>
+    <a href="about">このサービスについて</a>
+  </p>
+  <h1>お問い合わせ</h1>
+  <form action="confirm" method="POST">
+    <div>
+      email:<input type="text" name="email" value="">
+    </div>
+    <div>
+      本文:
+      <textarea name="message" rows="5"></textarea>
+    </div>
+    <div>
+      <input type="submit" value="送信する">
+    </div>
 
 <div>
-<a href="/">戻る</a>
+<a href="/test">戻る</a>
 </div>  
 
 </body>

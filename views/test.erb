@@ -21,15 +21,37 @@
 </head>
 <body>
 
-  <button class="button" type="submit" id = "button">Button</button>
+  <!--<button class="button" type="submit" id = "button">Button</button> -->
+  <button class="button" onclick="location.href='./test_new'">新規作成</button>
   
   
 
-  <ul>
-      <li><%= client.owner_name %></li>
-      <li>sample_textsample_text</li>
-      <li>sample_textsample_text</li>
-  </ul>
+   <p>送信されてきた情報です</p>
+  
+ <table border="1">
+        <thead >
+            <tr>
+                <th>ID</th>
+                <th>飼い主名</th>
+                <th>フリガナ</th>
+                <th>ペット名</th>
+                <th>種別</th>            
+            </tr>
+        </thead>
+            <tbody>
+                <% @clients.each do |client| %>
+                    <tr>
+                        <td><%= client.id %></td>
+                        <td><%= client.owner_name %></td>
+                        <td><%= client.phonetic_name %></td>
+                        <td><%= client.pet_name %></td>
+                        <td><%= client.pet_type %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+    </table>
+
+  
 
 </body>
 </html>
