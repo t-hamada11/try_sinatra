@@ -56,8 +56,15 @@ post "/test_save" do
   
   client = Client.new
   client.owner_name = params[:owner_name]
+  #if client.owner_name == ""
+    #erb :test_new_error
+  #else
+    #redirect "/test"
+  #end
   client.phonetic_name = params[:phonetic_name]
+  client.save
   client.pet_name = params[:pet_name]
+  client.save
   client.pet_type = params[:pet_type]
   client.save
 
@@ -72,4 +79,17 @@ post "/test_save" do
   #@client_phonetic_name.save
 
   redirect "/test"
+end
+
+get "/test_delete" do
+  
+  Client.destroy_all
+
+  redirect "/test"
+
+end
+
+get "/test_new_error" do
+
+  redirect "/test_new_error"
 end

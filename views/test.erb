@@ -12,21 +12,35 @@
  //jQueryで実行する内容
  });*/
  $("#sample").css("color","#d9534f");
+
+ function submitbtn() {
+    // 「OK」ボタン押下時
+    if (confirm('実行しますか？')) {
+        alert('OK');
+    }
+    // 「キャンセル」ボタン押下時
+    else {
+        alert('キャンセル');
+    }
+}
   
   </script>
 
 <link rel="stylesheet" href="css/hamada.css">
-<a href="index.html"><img src="images/animal.gif" alt="New Pet System" class="example1"></a>
+<!--<link rel="stylesheet" href="css/normalize.css">-->
+<!--<link rel="stylesheet" href="css/skeleton.css">-->
+<a href="/test"><img src="images/animal.gif" alt="New Pet System" class="example1"></a>
 
 </head>
 <body>
 
   <!--<button class="button" type="submit" id = "button">Button</button> -->
   <button class="button" onclick="location.href='./test_new'">新規作成</button>
+  <button class="button" onclick="location.href='./test_delete'">データベース削除</button>
   
   
 
-   <p>送信されてきた情報です</p>
+   <p>test_new.erbから送信されてきた情報です</p>
   
  <table border="1">
         <thead >
